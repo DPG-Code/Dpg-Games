@@ -1,9 +1,57 @@
 import Game from "./Game"
 
 function Results() {
+	let dataForm;
+	let listGames;
+	async function getGames() {
+		let platform = Object.values(dataForm)[0]
+		let genre = Object.values(dataForm)[1]
+		let sortBy = Object.values(dataForm)[2]
+		let data;
+		let optionsUser;
+
+		if (platform === "games" && genre === "") optionsUser = `games?sort-by=${sortBy}`
+		else if (genre === "") optionsUser = `games?platform=${platform}&sort-by=${sortBy}`
+		else optionsUser = `games?platform=${platform}&category=${genre}&sort-by=${sortBy}`
+
+		try{
+            const options = {
+                method: 'GET',
+                headers: {
+                    'X-RapidAPI-Key': 'd54b3e58ccmshcd2ec81f7622fe2p1f703ajsncf7ee4951129',
+                    'X-RapidAPI-Host': 'free-to-play-games-database.p.rapidapi.com'
+                }
+            };
+			const response = await fetch(`https://free-to-play-games-database.p.rapidapi.com/api/${optionsUser}`, options)
+			data = await response.json()
+			listGames = data[0]["title"]
+			console.log(listGames)
+
+			// title -> nombre
+			// thumbnail -> img
+			// short_description -> descripcion
+			// release_date -> año de lanzamiento
+			// publisher -> publisher
+			// platform -> platforma
+			// genre -> genero
+			// game_url -> url del juego
+			// developer -> developer	
+		}
+		catch (error) { console.error(error) }
+	}
+
+    const getFilters = (e) => {
+		e.preventDefault()
+		const newData = Object.fromEntries(
+			new FormData(e.target)
+		)
+		dataForm = newData
+		getGames()
+	}
+
 	return (
         <>
-            <form id="form" action="">
+            <form id="form-filter" action="" onSubmit={getFilters}>
 				<select className="platform" name="platform">
 					<option value="games" select>All Platform</option>
 					<option value="pc">Windows (PC)</option>
