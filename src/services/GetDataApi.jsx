@@ -1,4 +1,4 @@
-function getGames (params = {}) {
+function GetDataApi (params = {}) {
     const options = {
         method: 'GET',
         headers: {
@@ -11,9 +11,8 @@ function getGames (params = {}) {
         .then(response => {
             const data = response
             const games = data.map(game => game)
-            console.log(games)
             return games
     })
 }
 
-export default getGames
+export default GetDataApi

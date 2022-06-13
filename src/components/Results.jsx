@@ -1,26 +1,25 @@
 import { useEffect, useState } from "react";
 import Game from "./Game";
-import getGames from "../services/getGames";
+import GetDataApi from "../services/GetDataApi";
 
 function Results({params}) {
 	const {platform, category, sort} = params
 
 	const [games, setGame] = useState([])
-	const [loading, setLoading] = useState([false])
+	const [loading, setLoading] = useState(false)
 
 	useEffect(function(){
 		setLoading(true)
-		getGames({platform, category, sort})
+		GetDataApi({platform, category, sort})
 			.then(games => {
 				setGame(games)
 				setLoading(false)
 			})
-	}, [platform])
+	}, [params])
 
-	if(loading) return <p>cargando...</p>
-
-	return (
-		<>
+	return ( loading
+		? <p>cargando...</p>
+		: <>
 			{
 				games.map(singleGame => <Game key={singleGame.id} thumbnail={singleGame.thumbnail} title={singleGame.title} platform={singleGame.platform} developer={singleGame.developer}/>)
 			}

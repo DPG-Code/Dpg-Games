@@ -1,14 +1,18 @@
-import Results from "../components/Results"
-import Search from "../components/Search"
 import { Link, Route } from "wouter";
+import HomeResult from "./HomeResult";
+import GetDefault from "../services/GetDefault";
 
 function Home() {
   return (
     <main>
         <h1>App</h1>
-        <Link to="/games/pc/shooter/popularity">Pc - shooter/popularity</Link>
-        <Link to="/games/browser/shooter/popularity">Browser - shooter/popularity</Link>
-        <Route path="/games/:platform/:category/:sort" component={Results} />
+        <Link to='/'>Home</Link>
+        <Route path="/" component={HomeResult} />
+        <Route path="/games/:platform/:category/:sort" component={HomeResult} />
+
+        <section>
+          <GetDefault />
+        </section>
     </main>
   )
 }
