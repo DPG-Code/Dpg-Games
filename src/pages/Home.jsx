@@ -1,18 +1,24 @@
 import { Link, Route } from "wouter";
-import HomeResult from "./HomeResult";
+import SearchByTitle from "./SearchByTitle";
+import ResultsSearch from "../components/ResultsSearch";
+import SearchByFilters from "./SearchByFilters";
 import GetDefault from "../services/GetDefault";
 
 function Home() {
   return (
     <main>
-        <h1>App</h1>
+        <h1>Games</h1>
         <Link to='/'>Home</Link>
-        <Route path="/" component={HomeResult} />
-        <Route path="/games/:platform/:category/:sort" component={HomeResult} />
 
-        <section>
-          <GetDefault />
-        </section>
+        <Link to="/search">Search</Link>
+        <Route path="/search" component={SearchByTitle} />
+        <Route path="/search/:keyword" component={ResultsSearch} />
+
+        <Link to='/games'>Filters</Link>
+        <Route path="/games" component={SearchByFilters} />
+        <Route path="/games/:platform/:category/:sort" component={SearchByFilters} />
+
+        <Route path="/" component={GetDefault} />
     </main>
   )
 }

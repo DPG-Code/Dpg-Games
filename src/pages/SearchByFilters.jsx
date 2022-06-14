@@ -1,8 +1,8 @@
 import { useState} from "react";
 import { Link, Route, useLocation } from "wouter";
-import Results from '../components/Results'
+import ResultsFilters from '../components/ResultsFilters'
 
-function HomeResult() {
+function SearchByFilters() {
   const [path, pushLocation] = useLocation('')
 
   const handleSubmit = (e) => {
@@ -16,7 +16,6 @@ function HomeResult() {
       sort : Object.values(dataForm)[2]
     }
     pushLocation(`/games/${filters.platform}/${filters.category}/${filters.sort}`)
-    console.log(path)
   }
     
 
@@ -80,9 +79,9 @@ function HomeResult() {
       </form>
 
       <Link to={pushLocation}></Link>
-      <Route path="/games/:platform/:category/:sort" component={Results} />
+      <Route path="/games/:platform/:category/:sort" component={ResultsFilters} />
     </>
   )
 }
 
-export default HomeResult
+export default SearchByFilters
