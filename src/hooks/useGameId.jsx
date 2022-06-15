@@ -7,7 +7,7 @@ export default function useGamesId ({keyword}) {
 
     useEffect(function(){
     setLoading(true)
-    GetDataApiById({keyword})
+    GetDataApiById(/*{keyword}*/)
         .then(game => {
         setGames(game)
         setLoading(false)

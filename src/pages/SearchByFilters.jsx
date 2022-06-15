@@ -23,12 +23,12 @@ function SearchByFilters() {
     <>
       <form id="form-filter" action="" onSubmit={handleSubmit}>
         <select className="platform" name="platform">
-            <option value="games" select>All Platform</option>
+            <option value="" select>Choose Platform</option>
             <option value="pc">Windows (PC)</option>
             <option value="browser">Browser (WEB)</option>
         </select>
         <select className="genres" name="genres">
-            <option value="" select>All Genres</option>
+            <option value="" select>Choose Genre/Tag</option>
             <option value="mmo">MMO</option>
             <option value="mmorpg">MMORPG</option>
             <option value="shooter">Shooter</option>
@@ -70,7 +70,8 @@ function SearchByFilters() {
             <option value="permadeath">Permadeath</option>
         </select>
         <select className="sort" name="sort">
-            <option value="relevance" select>Relevance</option>
+            <option value="" select>Sort By</option>
+            <option value="relevance">Relevance</option>
             <option value="popularity">Popularity</option>
             <option value="release-date">Release Date</option>
             <option value="alphabetical">Alphabetical</option>

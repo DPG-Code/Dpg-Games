@@ -1,4 +1,4 @@
-export default function GetDataApiById ({keyword} = {}) {
+export default function GetDataApiById (/*{keyword} = {}*/) {
     const options = {
         method: 'GET',
         headers: {
@@ -7,7 +7,7 @@ export default function GetDataApiById ({keyword} = {}) {
         }
     };
 
-	return fetch(`https://free-to-play-games-database.p.rapidapi.com/api/game?id=${keyword}`, options)
+	return fetch(`https://free-to-play-games-database.p.rapidapi.com/api/games`, options)
 	.then(res => res.json())
 	.then(response => {
 		const data = response
@@ -15,3 +15,5 @@ export default function GetDataApiById ({keyword} = {}) {
 	    return games
 	})
 }
+
+//data.filter(gameById => gameById.title.toLowerCase() === keyword.toLowerCase())
