@@ -1,6 +1,7 @@
 import { useState} from "react";
 import { Link, Route, useLocation } from "wouter";
 import ResultsFilters from '../components/ResultsFilters'
+import './styles/Filters.css'
 
 function SearchByFilters() {
   const [path, pushLocation] = useLocation('')
@@ -79,8 +80,10 @@ function SearchByFilters() {
         <input type="submit" name="submit" id="submit" value="Filter" />
       </form>
 
-      <Link to={pushLocation}></Link>
-      <Route path="/games/:platform/:category/:sort" component={ResultsFilters} />
+      <section className="result-filters">
+        <Link to={pushLocation}></Link>
+        <Route path="/games/:platform/:category/:sort" component={ResultsFilters} />
+      </section>
     </>
   )
 }

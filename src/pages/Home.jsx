@@ -3,22 +3,34 @@ import SearchByTitle from "./SearchByTitle";
 import ResultsSearch from "../components/ResultsSearch";
 import SearchByFilters from "./SearchByFilters";
 import GetDefault from "../services/GetDefault";
+import './styles/Home.css'
 
 function Home() {
   return (
-    <main>
-        <h1>Games</h1>
-        <Link to='/'>Home</Link>
+    <main className="home-container">
+        <Link className="home" to='/'>Home</Link>
 
-        <Link to="/search">Search</Link>
-        <Route path="/search" component={SearchByTitle} />
-        <Route path="/search/:keyword" component={ResultsSearch} />
+        <h1>Find Games</h1>
 
-        <Link to='/games'>Filters</Link>
-        <Route path="/games" component={SearchByFilters} />
-        <Route path="/games/:platform/:category/:sort" component={SearchByFilters} />
+        <section className="links">
+          <Link className="search" to="/search">Search</Link>
+          <Link className="filters" to='/games'>Filters</Link>
+        </section>
 
-        <Route path="/" component={GetDefault} />
+        <section className="links-options">
+          <Route path="/search" component={SearchByTitle} />
+          <Route path="/games" component={SearchByFilters} />
+        </section>
+
+        <section className="games-home">
+          <Route path="/" component={GetDefault} />
+        </section>
+        <section className="games-search">
+          <Route path="/search/:keyword" component={ResultsSearch} />
+        </section>
+        <section className="games-filters">
+          <Route path="/games/:platform/:category/:sort" component={SearchByFilters} />
+        </section>
     </main>
   )
 }
