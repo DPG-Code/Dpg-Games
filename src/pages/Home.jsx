@@ -8,13 +8,20 @@ import './styles/Home.css'
 function Home() {
   return (
     <main className="home-container">
-        <Link className="home" to='/'>Home</Link>
+        <header>
+          <Link className="home" to='/'>DPG - Games</Link>
+        </header>
 
-        <h1>Find Games</h1>
-
-        <section className="links">
-          <Link className="search" to="/search">Search</Link>
-          <Link className="filters" to='/games'>Filters</Link>
+        <section className="inicio">
+          <aside>
+            <h1>Free Games</h1>
+            <p>find your favorite or new games</p>
+            <div className="links">
+              <Link className="search" to="/search">Search by Tiltle</Link>
+              <Link className="filters" to='/games'>Search by Filters</Link>
+            </div>
+          </aside>
+          <img src="" alt="" />
         </section>
 
         <section className="links-options">
@@ -22,14 +29,15 @@ function Home() {
           <Route path="/games" component={SearchByFilters} />
         </section>
 
-        <section className="games-home">
-          <Route path="/" component={GetDefault} />
-        </section>
         <section className="games-search">
           <Route path="/search/:keyword" component={ResultsSearch} />
         </section>
         <section className="games-filters">
           <Route path="/games/:platform/:category/:sort" component={SearchByFilters} />
+        </section>
+
+        <section className="games-home">
+          <Route path="/" component={GetDefault} />
         </section>
     </main>
   )

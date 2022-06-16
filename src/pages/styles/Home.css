@@ -5,47 +5,82 @@ body{
 .home-container{
     width: 100%;
     height: auto;
+    min-height: 100vh;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-start;
+    background-color: #1B1B21;
 }
 
-.home{
-    margin: 10px auto;
-    color: #000000;
-    text-decoration: none;
-}
-
-h1{
-    margin: 10px auto;
-    font-size: 50px;
-    text-align: center;
-}
-
-.links{
+header{
     width: 100%;
-    height: auto;
+    height: 50px;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-start;
+    box-shadow: 0px 20px 20px -10px #0000005e;
+    position: absolute;
+    top: 0;
     }
-    .search{
-        margin: 0 15px;
-        padding: 2px 12px;
-        color: #000000;
+    .home{
+        margin-left: 25px;
+        color: #ffffff;
+        font-weight: 500;
         text-decoration: none;
-        border: 1px solid #000000;
-        border-radius: 5px;
     }
-    .filters{
-        margin: 0 15px;
-        padding: 2px 12px;
-        color: #000000;
-        text-decoration: none;
-        border: 1px solid #000000;
-        border-radius: 5px;
+
+.inicio{
+    width: 100%;
+    height: 100vh;
+    display: flex;
     }
+    .inicio aside{
+        padding-left: 25px;
+        width: 50%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: center;
+        }
+        .inicio aside h1{
+            margin: 0;
+            font-size: 100px;
+            text-align: center;
+            color: #bfd427;
+        }
+        .inicio aside p{
+            margin-top: 20px;
+            font-size: 20px;
+            text-align: center;
+            color: #ffffff;
+        }
+        .links{
+            margin-top: 20px;
+            width: auto;
+            display: flex;
+            align-items: flex-start;
+            justify-content: center;
+            }
+            .search{
+                margin-right: 25px;
+                padding: 2px 12px;
+                color: #ffffff;
+                font-size: 17.5px;
+                text-decoration: none;
+                border: 1px solid #ffffff;
+                border-radius: 5px;
+            }
+            .filters{
+                margin: 0;
+                padding: 2px 12px;
+                color: #ffffff;
+                font-size: 17.5px;
+                text-decoration: none;
+                border: 1px solid #ffffff;
+                border-radius: 5px;
+            }
 
 .links-options{
     margin: 25px auto;
@@ -58,7 +93,7 @@ h1{
     flex-wrap: wrap;
     align-items: center;
     justify-content: center;
-    gap: 20px;
+    gap: 50px;
 }
 .games-search{
     width: 100%;
@@ -67,7 +102,7 @@ h1{
     flex-wrap: wrap;
     align-items: center;
     justify-content: center;
-    gap: 20px;
+    gap: 50px;
 }
 .games-filters{
     width: 100%;
@@ -75,5 +110,5 @@ h1{
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: flex-start;
+    justify-content: center;
 }
