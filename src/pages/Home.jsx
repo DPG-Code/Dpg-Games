@@ -14,11 +14,11 @@ function Home() {
 
         <section className="inicio">
           <aside>
-            <h1>Free Games</h1>
-            <p>find your favorite or new games</p>
+            <h1>FREE GAMES</h1>
+            <p>FIND NEW GAMES</p>
             <div className="links">
-              <Link className="search" to="/search">Search by Tiltle</Link>
-              <Link className="filters" to='/games'>Search by Filters</Link>
+              <Link className="search" to="/search">SEARCH BY TITLE</Link>
+              <Link className="filters" to='/games'>SEARCH BY FILTERS</Link>
             </div>
           </aside>
           <img src="" alt="" />

@@ -10,7 +10,7 @@ body{
     flex-direction: column;
     align-items: center;
     justify-content: flex-start;
-    background-color: #1B1B21;
+    background: linear-gradient(90deg, rgba(4,24,61,1) 0%, rgba(1,16,47,1) 100%);
 }
 
 header{
@@ -46,13 +46,13 @@ header{
         }
         .inicio aside h1{
             margin: 0;
-            font-size: 100px;
+            font-size: 80px;
             text-align: center;
-            color: #bfd427;
+            color: #ffffff;
         }
         .inicio aside p{
-            margin-top: 20px;
-            font-size: 20px;
+            margin: 0;
+            font-size: 25px;
             text-align: center;
             color: #ffffff;
         }
@@ -65,21 +65,23 @@ header{
             }
             .search{
                 margin-right: 25px;
-                padding: 2px 12px;
-                color: #ffffff;
-                font-size: 17.5px;
+                padding: 10px 15px;
+                color: #000000;
+                background-color: #ffffff;
+                font-size: 12px;
+                font-weight: 700;
                 text-decoration: none;
-                border: 1px solid #ffffff;
-                border-radius: 5px;
+                border-radius: 15px;
             }
             .filters{
                 margin: 0;
-                padding: 2px 12px;
-                color: #ffffff;
-                font-size: 17.5px;
+                padding: 10px 15px;
+                color: #000000;
+                background-color: #ffffff;
+                font-size: 12px;
+                font-weight: 700;
                 text-decoration: none;
-                border: 1px solid #ffffff;
-                border-radius: 5px;
+                border-radius: 15px;
             }
 
 .links-options{
@@ -87,6 +89,7 @@ header{
 }
 
 .games-home{
+    margin-bottom: 50px;
     width: 100%;
     height: auto;
     display: flex;
@@ -96,6 +99,7 @@ header{
     gap: 50px;
 }
 .games-search{
+    margin-bottom: 50px;
     width: 100%;
     height: auto;
     display: flex;

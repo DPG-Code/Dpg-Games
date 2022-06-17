@@ -1,5 +1,6 @@
 import { Link, useLocation } from "wouter"
 import { useState } from "react"
+import './styles/Search.css'
 
 function SearchByTitle () {
     const [keyword, setKeyword] = useState('')
@@ -15,11 +16,11 @@ function SearchByTitle () {
     }
 
     return (
-        <section className="App-container">
+        <section className="search-container">
             <h3>Find Games</h3>
 
             <form onSubmit={handleSubmit}>
-                <input onChange={handleChange} type="text" value={keyword}/>
+                <input onChange={handleChange} type="text" value={keyword} placeholder="Search game by title"/>
             </form>
         </section>
     )
