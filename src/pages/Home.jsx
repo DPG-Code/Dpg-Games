@@ -4,6 +4,7 @@ import ResultsSearch from "../components/ResultsSearch";
 import SearchByFilters from "./SearchByFilters";
 import GetDefault from "../services/GetDefault";
 import './styles/Home.css'
+import god from '../img/god-of-war.webp'
 
 function Home() {
   return (
@@ -21,7 +22,7 @@ function Home() {
               <Link className="filters" to='/games'>SEARCH BY FILTERS</Link>
             </div>
           </aside>
-          <img className="img-inicio" src="../../god-of-war.webp" alt="god-of-war" />
+          <img className="img-inicio" src={god} alt="god-of-war" />
         </section>
 
         <section className="links-options">

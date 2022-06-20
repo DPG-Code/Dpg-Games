@@ -17,11 +17,12 @@
 }
 
 .search-container input{
-    padding: 5px;
+    padding: 7.5px;
     width: 300px;
     height: auto;
     color: #ffffff;
     background-color: transparent;
-    border: 1px solid #ffffff;
+    border: 1px solid #ffffff11;
+    border-radius: 5px;
     outline: none;
 }
