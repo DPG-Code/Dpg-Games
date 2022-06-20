@@ -10,20 +10,24 @@
 
 #form-filter select{
     margin: 10px 15px;
-    padding: 2.5px;
+    padding: 5px;
     width: 200px;
-    height: 30px;
+    height: auto;
+    color: #ffffff;
+    background-color: #14191D;
     border-radius: 5px;
     outline: none;
-    border: none;
+    border: 1px solid #ffffff11;
 }
 #form-filter input{
     margin: 10px 15px;
-    padding: 2.5px;
-    height: 30px;
+    padding: 5px 15px;
+    height: auto;
+    color: #ffffff;
+    background-color: #0085E4;
     border-radius: 5px;
     outline: none;
-    border: none;
+    border: 1px solid #ffffff11;
 }
 
 .result-filters{
