@@ -16,13 +16,9 @@ function SearchByTitle () {
     }
 
     return (
-        <section className="search-container">
-            <h3>Find Games</h3>
-
-            <form onSubmit={handleSubmit}>
-                <input onChange={handleChange} type="text" value={keyword} placeholder="Search game by title"/>
-            </form>
-        </section>
+        <form id="search" onSubmit={handleSubmit}>
+            <input onChange={handleChange} type="text" value={keyword} placeholder="Search game by title"/>
+        </form>
     )
 
 }

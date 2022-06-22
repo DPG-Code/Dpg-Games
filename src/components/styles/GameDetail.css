@@ -1,0 +1,98 @@
+.game-detail{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    position: relative;
+}
+
+section{
+    z-index: 5;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    }
+    .img-detail{
+        margin-bottom: 25px;
+        width: 280px;
+        height: auto;
+    }
+    section div{
+        width: 280px;
+        height: auto;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .free{
+        padding: 5px 15px;
+        margin: 0 5px;
+        font-size: 15px;
+        color: #ffffff;
+        border-radius: 5px;
+        background-color: #ffffff1e;
+    }
+    section div a{
+        padding: 5px 15px;
+        margin: 0 5px;
+        font-size: 15px;
+        color: #ffffff;
+        border-radius: 5px;
+        background-color: #019949;
+        text-decoration: none;
+    }
+
+aside{
+    z-index: 5;
+    width: 40%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    }
+    h3{
+        margin: 10px 0;
+        font-size: 45px;
+        color: #ffffff;
+    }
+    .description{
+        margin: 15px 0;
+        font-size: 20px;
+        color: #ffffff80;
+    }
+    .platform{
+        margin: 2.5px 0;
+        font-size: 15px;
+        color: #ffffff80;
+    }
+    .genre{
+        margin: 2.5px 0;
+        font-size: 15px;
+        color: #ffffff80;
+    }
+    .developer{
+        margin: 2.5px 0;
+        font-size: 15px;
+        color: #ffffff80;
+    }
+    .publisher{
+        margin: 2.5px 0;
+        font-size: 15px;
+        color: #ffffff80;
+    }
+    .release_date{
+        margin: 2.5px 0;
+        font-size: 15px;
+        color: #ffffff80;
+    }
+
+.img-detail-back{
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    opacity: 10%;
+    filter: blur(2px);
+    object-fit: cover;
+    position: absolute;
+}
