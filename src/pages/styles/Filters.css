@@ -1,5 +1,5 @@
 #form-filter{
-    margin-bottom: 50px;
+    margin: 100px auto 50px auto;
     width: 100%;
     height: auto;
     display: flex;
@@ -34,9 +34,7 @@
     margin-bottom: 50px;
     width: 100%;
     height: auto;
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: center;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, 320px);
     gap: 50px;
 }

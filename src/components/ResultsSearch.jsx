@@ -9,10 +9,12 @@ export default function ResultsSearch ({params}) {
 
   return (
     <>
+      <h2>Result</h2>
       { loading
       ? <p>Cargando...</p>
       : gameById.map(singleGame => <Game key={singleGame.id} thumbnail={singleGame.thumbnail} title={singleGame.title} platform={singleGame.platform} developer={singleGame.developer}/>)
       }
+      <div className='bottom'></div>
     </>
   )
 }

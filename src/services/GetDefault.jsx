@@ -28,9 +28,13 @@ function GetDefault () {
 	return ( loading
 		? <p>cargando...</p>
 		: <>
-			{
-				games.map(singleGame => <Game key={singleGame.id} thumbnail={singleGame.thumbnail} title={singleGame.title} platform={singleGame.platform} developer={singleGame.developer}/>)
-			}
+            <h2>All Games</h2>
+            <div className='all-games_content'>
+                {
+                    games.map(singleGame => <Game key={singleGame.id} thumbnail={singleGame.thumbnail} title={singleGame.title} platform={singleGame.platform} developer={singleGame.developer}/>)
+                }
+            </div>
+            <div className='bottom'></div>
       	</>
 	)
 }

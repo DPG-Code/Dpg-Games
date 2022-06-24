@@ -5,9 +5,9 @@ export default function GameDetail(props) {
         <div className='game-detail'>
             <section>
                 <img className='img-detail' src={props.thumbnail} alt={props.title} />
-                <div>
+                <div className='container_link-game'>
                     <p className='free'>FREE</p>
-                    <a href='{props.game_url}' target='_blank'>Play Now</a>
+                    <a className='link-game' href='{props.game_url}' target='_blank'>Play Now</a>
                 </div>
             </section>
             <aside>

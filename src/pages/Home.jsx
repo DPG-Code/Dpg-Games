@@ -4,9 +4,9 @@ import ResultsSearch from "../components/ResultsSearch";
 import SearchByFilters from "./SearchByFilters";
 import GetDefault from "../services/GetDefault";
 import Detail from "./Detail"
-import './styles/Home.css'
 import god from '../img/god-of-war.webp'
 import back from '../img/back1.png'
+import './styles/Home.css'
 
 function Home() {
   return (
@@ -24,6 +24,7 @@ function Home() {
             <p>Game list for browser and pc</p>
             <div className="links">
               <Link className="filters" to='/games'>SEARCH BY FILTERS</Link>
+              <Link className="all-games_movile" to='/allgames'>All Games</Link>
             </div>
           </aside>
           <img className="img-inicio" src={god} alt="god-of-war" />
@@ -37,6 +38,7 @@ function Home() {
         <section className="games-search">
           <Route path="/search/:keyword" component={ResultsSearch} />
         </section>
+
         <section className="games-filters">
           <Route path="/games/:platform/:category/:sort" component={SearchByFilters} />
         </section>

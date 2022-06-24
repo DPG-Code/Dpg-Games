@@ -1,4 +1,5 @@
 .game{
+    margin: auto;
     width: 320px;
     height: auto;
     display: flex;

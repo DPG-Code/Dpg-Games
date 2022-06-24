@@ -19,7 +19,7 @@ section{
         width: 280px;
         height: auto;
     }
-    section div{
+    .container_link-game{
         width: 280px;
         height: auto;
         display: flex;
@@ -34,7 +34,7 @@ section{
         border-radius: 5px;
         background-color: #ffffff1e;
     }
-    section div a{
+    .link-game{
         padding: 5px 15px;
         margin: 0 5px;
         font-size: 15px;

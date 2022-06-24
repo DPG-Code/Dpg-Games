@@ -13,7 +13,7 @@ function Detail({params}) {
 			: gameDetail.map(singleGameDetail => 
 				<GameDetail
 					key={gameDetail[0].id}
-					src={gameDetail[0].thumbnail}
+					thumbnail={gameDetail[0].thumbnail}
 					alt={gameDetail[0].title}
 					developer={gameDetail[0].developer}
 					game_url={gameDetail[0].game_url}

@@ -1,6 +1,4 @@
-body{
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-}
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
 ::-webkit-scrollbar {
     width: 8px;
@@ -17,11 +15,13 @@ body{
     width: 100%;
     height: auto;
     min-height: 100vh;
+    font-family: 'Montserrat', sans-serif;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: flex-start;
     background-color: #14191D;
+    overflow: hidden;
 }
 
 header{
@@ -39,21 +39,25 @@ header{
     .home{
         margin-right: auto;
         color: #ffffff;
-        font-size: 20px;
+        font-size: 10px;
         font-weight: 500;
         text-decoration: none;
     }
     .all-games{
-        margin-right: 35px;
+        display: none;
+    }
+    .all-games_movile{
+        display: block;
+        margin: auto 0;
         color: #ffffff75;
-        font-size: 15px;
+        font-size: 12px;
         font-weight: 500;
         text-decoration: none;
     }
     .avatar{
-        margin-left: 35px;
-        width: 30px;
-        height: 30px;
+        margin-left: 10px;
+        width: 25px;
+        height: 25px;
         background-color: #ffffff;
         border-radius: 50%;
     }
@@ -61,15 +65,17 @@ header{
 .inicio{
     width: 100%;
     height: 100vh;
+    min-height: 650px;
     display: flex;
     align-items: center;
+    justify-content: flex-start;
     position: relative;
     }
     .inicio aside{
+        margin-top: 150px;
         z-index: 100;
-        padding-left: 7.5%;
-        width: 100%;
-        height: 100%;
+        width: 80%;
+        height: auto;
         display: flex;
         flex-direction: column;
         align-items: flex-start;
@@ -77,14 +83,13 @@ header{
         }
         .inicio aside h1{
             margin: 0;
-            font-size: 80px;
-            text-align: center;
+            font-size: 50px;
+            text-align: left;
             color: #ffffff;
         }
         .inicio aside p{
             margin: 0;
-            font-size: 25px;
-            text-align: center;
+            font-size: 20px;
             color: #ffffff;
         }
         .links{
@@ -95,21 +100,21 @@ header{
             justify-content: center;
             }
             .filters{
-                margin: 0;
-                padding: 12.5px 17.5px;
+                margin-right: 20px;
+                padding: 10px 15px;
                 color: #ffffff;
                 background-color: #019949;
-                font-size: 12px;
+                font-size: 8px;
                 font-weight: 700;
                 text-decoration: none;
                 border-radius: 25px;
             }
     .img-inicio{
         z-index: 50;
-        width: auto;
-        height: 75%;
+        width: 100%;
+        height: auto;
         position: absolute;
-        right: 7.5%;
+        bottom: 0;
     }
     .img-inicio-back{
         margin: auto;
@@ -121,34 +126,132 @@ header{
     }
 
 .links-options{
-    margin: auto;
+    margin: 0;
+    width: 100%;
+    height: auto;
+    background-color: #14191D;
 }
 
 .games-home{
-    margin: auto;
     width: 100%;
     height: auto;
     display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: center;
-    gap: 50px;
-}
+    flex-direction: column;
+    background-color: #14191D;
+    }
+    .games-home h2{
+        margin: 50px auto 75px auto;
+        font-size: 50px;
+        font-weight: 700;
+        color: #ffffff;
+    }
+    .all-games_content{
+        width: 100%;
+        height: auto;
+        display: grid;
+        align-items: center;
+        justify-content: center;
+        grid-template-columns: repeat(auto-fit, 320px);
+        gap: 50px;
+    }
+
 .games-search{
-    margin: auto;
     width: 100%;
     height: auto;
     display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: center;
-    gap: 50px;
-}
+    flex-direction: column;
+    background-color: #14191D;
+    }.games-search h2{
+        margin: 50px auto;
+        font-size: 50px;
+        font-weight: 700;
+        color: #ffffff;
+    }
+
 .games-filters{
     width: 100%;
     height: auto;
     display: flex;
     flex-direction: column;
+    background-color: #14191D;
+}
+
+.bottom{
+    margin-bottom: 50px;
+}
+
+@media only screen and (min-width: 700px) {
+header{
+    padding: 0 7.5%;
+    width: 100%;
+    height: 65px;
+    }
+    .home{
+        font-size: 20px;
+    }
+    .all-games{
+        display: block;
+        margin-right: 35px;
+        color: #ffffff75;
+        font-size: 15px;
+        font-weight: 500;
+        text-decoration: none;
+    }
+    .all-games_movile{
+        display: none;
+    }
+    .avatar{
+        margin-left: 35px;
+        width: 30px;
+        height: 30px;
+    }
+
+.inicio{
+    z-index: 10;
+    width: 100%;
+    height: 100vh;
+    display: flex;
     align-items: center;
-    justify-content: center;
+    position: relative;
+    }
+    .inicio aside{
+        z-index: 100;
+        margin: 0;
+        padding-left: 7.5%;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: center;
+        }
+        .inicio aside h1{
+            margin: 0;
+            font-size: 80px;
+        }
+        .inicio aside p{
+            margin: 0;
+            font-size: 25px;
+        }
+        .links{
+            margin-top: 20px;
+            width: auto;
+            display: flex;
+            align-items: flex-start;
+            justify-content: center;
+            }
+            .filters{
+                margin: 0;
+                padding: 12.5px 17.5px;
+                font-size: 12px;
+            }
+    .img-inicio{
+        z-index: 50;
+        margin: auto;
+        width: auto;
+        height: 70%;
+        top: 0;
+        left: auto;
+        right: 0;
+    }
 }
