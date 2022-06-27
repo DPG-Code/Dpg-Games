@@ -20,7 +20,7 @@
     flex-direction: column;
     align-items: center;
     justify-content: flex-start;
-    background-color: #14191D;
+    background-color: #000000;
     overflow: hidden;
 }
 
@@ -29,11 +29,14 @@ header{
     padding: 0 5%;
     width: 100%;
     height: 65px;
-    background-color: #00000025;
+    background: rgba(0, 0, 0, 0.50);
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.50);
+    backdrop-filter: blur( 4px );
+    -webkit-backdrop-filter: blur( 4px );
     display: flex;
     align-items: center;
     justify-content: space-between;
-    position: absolute;
+    position: fixed;
     top: 0;
     }
     .home{
@@ -45,14 +48,6 @@ header{
     }
     .all-games{
         display: none;
-    }
-    .all-games_movile{
-        display: block;
-        margin: auto 0;
-        color: #ffffff75;
-        font-size: 12px;
-        font-weight: 500;
-        text-decoration: none;
     }
     .avatar{
         margin-left: 10px;
@@ -67,8 +62,8 @@ header{
     height: 100vh;
     min-height: 650px;
     display: flex;
-    align-items: center;
-    justify-content: flex-start;
+    align-items: flex-start;
+    justify-content: center;
     position: relative;
     }
     .inicio aside{
@@ -84,13 +79,15 @@ header{
         .inicio aside h1{
             margin: 0;
             font-size: 50px;
+            font-weight: 700;
             text-align: left;
             color: #ffffff;
         }
         .inicio aside p{
             margin: 0;
             font-size: 20px;
-            color: #ffffff;
+            font-weight: 300;
+            color: #ffffffab;
         }
         .links{
             margin-top: 20px;
@@ -102,17 +99,44 @@ header{
             .filters{
                 margin-right: 20px;
                 padding: 10px 15px;
-                color: #ffffff;
-                background-color: #019949;
-                font-size: 8px;
-                font-weight: 700;
+                font-size: 10px;
+                font-weight: 800;
+                color: #000000;
+                clip-path: polygon(7% 0%, 100% 0, 100% 70%, 93% 100%, 0 100%, 0% 30%);
+                background-color: #ffffff;
                 text-decoration: none;
-                border-radius: 25px;
+                position: relative;
+                }
+                .filters::before{
+                    content: "";
+                    width: 50px;
+                    height: 1px;
+                    background-color: #000;
+                    position: absolute;
+                    top: 7px;
+                    right: 7px;
+                }
+                .filters::after{
+                    content: "";
+                    width: 1px;
+                    height: 15px;
+                    background-color: #000;
+                    position: absolute;
+                    top: 7px;
+                    right: 7px;
+                }
+            .all-games_movile{
+                display: block;
+                margin: auto 0;
+                color: #ffffff75;
+                font-size: 14px;
+                font-weight: 500;
+                text-decoration: none;
             }
     .img-inicio{
         z-index: 50;
-        width: 100%;
-        height: auto;
+        width: auto;
+        height: 60%;
         position: absolute;
         bottom: 0;
     }
@@ -137,11 +161,11 @@ header{
     height: auto;
     display: flex;
     flex-direction: column;
-    background-color: #14191D;
+    background-color: #000000;
     }
     .games-home h2{
-        margin: 50px auto 75px auto;
-        font-size: 50px;
+        margin: 100px auto 50px auto;
+        font-size: 45px;
         font-weight: 700;
         color: #ffffff;
     }
@@ -160,10 +184,9 @@ header{
     height: auto;
     display: flex;
     flex-direction: column;
-    background-color: #14191D;
     }.games-search h2{
-        margin: 50px auto;
-        font-size: 50px;
+        margin: 100px auto 50px auto;
+        font-size: 45px;
         font-weight: 700;
         color: #ffffff;
     }
@@ -241,8 +264,8 @@ header{
             justify-content: center;
             }
             .filters{
+                padding: 15px 20px;
                 margin: 0;
-                padding: 12.5px 17.5px;
                 font-size: 12px;
             }
     .img-inicio{
