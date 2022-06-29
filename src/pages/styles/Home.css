@@ -4,10 +4,10 @@
     width: 8px;
 }
 ::-webkit-scrollbar-track {
-    background: #14191D;
+    background: #000000;
 }
 ::-webkit-scrollbar-thumb {
-    background: #019949;
+    background: #ffffff;
     border-radius: 5px;
 }
 
@@ -153,7 +153,7 @@ header{
     margin: 0;
     width: 100%;
     height: auto;
-    background-color: #14191D;
+    background-color: #000000;
 }
 
 .games-home{
@@ -196,7 +196,7 @@ header{
     height: auto;
     display: flex;
     flex-direction: column;
-    background-color: #14191D;
+    background-color: #000000;
 }
 
 .bottom{

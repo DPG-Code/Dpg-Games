@@ -1,5 +1,6 @@
 import useGamesId from '../hooks/useGameId'
 import Game from '../components/Game'
+import Spinner from "../components/Spinner"
 
 export default function ResultsSearch ({params}) {
   const {keyword} = params
@@ -11,7 +12,7 @@ export default function ResultsSearch ({params}) {
     <>
       <h2>Result</h2>
       { loading
-      ? <p>Cargando...</p>
+      ? <Spinner />
       : gameById.map(singleGame => <Game key={singleGame.id} thumbnail={singleGame.thumbnail} title={singleGame.title} platform={singleGame.platform} developer={singleGame.developer}/>)
       }
       <div className='bottom'></div>

@@ -1,5 +1,6 @@
-import Game from "../components/Game";
 import {useState, useEffect} from 'react'
+import Game from "../components/Game";
+import Spinner from "../components/Spinner"
 
 function GetDefault () {
     const [games, setGame] = useState([])
@@ -26,7 +27,7 @@ function GetDefault () {
     }, [])
 
 	return ( loading
-		? <p>cargando...</p>
+		? <Spinner />
 		: <>
             <h2>All Games</h2>
             <div className='all-games_content'>

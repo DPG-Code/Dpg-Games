@@ -1,6 +1,6 @@
 import { Link } from 'wouter'
-import god from '../img/god-of-war.webp'
-import back from '../img/back1.png'
+import god from '../img/god.webp'
+import back from '../img/background.webp'
 
 export default function HomeContent(){
     return(

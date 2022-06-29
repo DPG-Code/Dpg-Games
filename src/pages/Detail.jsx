@@ -1,5 +1,6 @@
 import useGamesId from "../hooks/useGameId"
 import GameDetail from "../components/GameDetail"
+import Spinner from "../components/Spinner"
 
 function Detail({params}) {
 	const {loading, games} = useGamesId({params})
@@ -9,7 +10,7 @@ function Detail({params}) {
 	return (
 		<>
 		{ loading
-			? <p>Cargando...</p>
+			? <Spinner />
 			: gameDetail.map(singleGameDetail => 
 				<GameDetail
 					key={gameDetail[0].id}
