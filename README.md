@@ -1,7 +1,7 @@
 # Dpg-Games 👾
 
 ### 🎮 About The Project
-Video game search app, with filters, information and direct links for each one
+Video game search app, with filters, information and direct links for each one.
 
 ### 🎮 Built With
 - JavaScript
