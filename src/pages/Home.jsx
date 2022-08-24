@@ -14,7 +14,7 @@ function Home() {
           <Link className="home" to='/'>FreeGames</Link>
           <Link className="all-games" to='/allgames'>All Games</Link>
           <SearchByTitle />
-          <div className="avatar"></div>
+          <div className="avatar"><img src="https://cdn.hobbyconsolas.com/sites/navi.axelspringer.es/public/styles/hc_940x529/public/media/image/2021/11/god-war-kratos-2525517.jpg?itok=IBKfz-l2" alt="profile" /></div>
         </header>
 
         <Route path="/" component={HomeContent}/>
