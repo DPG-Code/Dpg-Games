@@ -3,7 +3,7 @@ import Game from "../components/Game";
 import Spinner from "../components/Spinner"
 
 function GetDefault () {
-    const [games, setGame] = useState([])
+  const [games, setGame] = useState([])
 	const [loading, setLoading] = useState(false)
     
     const options = {
@@ -29,14 +29,16 @@ function GetDefault () {
 	return ( loading
 		? <Spinner />
 		: <>
-            <h2>All Games</h2>
+            <div className='all-games_title'>
+              <div className='shadow-title_allgames'></div>
+              <h2>ALL GAMES</h2>
+            </div>
             <div className='all-games_content'>
                 {
-                    games.map(singleGame => <Game key={singleGame.id} thumbnail={singleGame.thumbnail} title={singleGame.title} platform={singleGame.platform} developer={singleGame.developer}/>)
+                  games.map(singleGame => <Game key={singleGame.id} thumbnail={singleGame.thumbnail} title={singleGame.title} platform={singleGame.platform} developer={singleGame.developer}/>)
                 }
             </div>
-            <div className='bottom'></div>
-      	</>
+      </>
 	)
 }
 

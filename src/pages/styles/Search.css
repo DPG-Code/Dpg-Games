@@ -1,29 +1,40 @@
+:root{
+  --main-bg-color: #121212;
+  --second-bg-card: #1B1B1B;
+  --main-blue: #007DFC;
+  --main-white: #FFFFFF;
+  --second-white: #767676;
+}
+
 #search{
-    margin: 0;
+    display: flex;
+    align-items: center;
+    position: relative;
 }
 
 #search input{
-    padding: 5px 15px;
-    width: auto;
-    color: #ffffff;
-    font-size: 10px;
+    padding: 4px 12px;
+    width: 120px;
+    color: var(--main-white);
+    font-size: 12px;
     font-weight: 500;
-    background-color: #ffffff1e;
-    border: none;
+    background-color: transparent;
+    border: 1px solid var(--second-white);
     border-radius: 15px;
     outline: none;
 }
 
+#search svg{
+  width: 14px;
+  height: 14px;
+  position: absolute;
+  right: 10px;
+}
+
 @media only screen and (min-width: 700px){
     #search input{
-        padding: 5px 15px;
+        padding: 4px 16px;
         width: auto;
-        color: #ffffff;
         font-size: 14px;
-        font-weight: 500;
-        background-color: #ffffff1e;
-        border: none;
-        border-radius: 15px;
-        outline: none;
     }
 }

@@ -1,42 +1,79 @@
+:root{
+  --main-bg-color: #121212;
+  --second-bg-card: #1B1B1B;
+  --main-blue: #007DFC;
+  --main-white: #FFFFFF;
+  --second-white: #767676;
+}
+
+.filter_title{
+  margin-top: 124px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+.filter_title::before{
+  content: '';
+  width: 2px;
+  height: 30px;
+  background-color: var(--main-blue);
+}
+.shadow-title_filter{
+  margin-right: 6px;
+  width: 12px;
+  height: 30px;
+  background: var(--main-blue);
+  background: linear-gradient(90deg, var(--main-blue) 0%, var(--main-bg-color) 100%);
+  opacity: 20%;
+}
+.filter_title h2{
+  font-size: 25px;
+  font-weight: 700;
+  color: var(--main-white);
+}
+
 #form-filter{
-    margin: 100px auto 50px auto;
+    margin: 62px auto;
     width: 100%;
-    height: auto;
     display: flex;
-    flex-wrap: wrap;
+    flex-direction: column;
+    gap: 10px;
     align-items: center;
     justify-content: center;
 }
 
 #form-filter select{
-    margin: 10px 15px;
-    padding: 5px;
+    padding: 4px 12px;
     width: 200px;
     height: auto;
-    color: #ffffff;
-    font-size: 15px;
-    font-weight: 500;
-    background-color: #000000;
-    border-radius: 5px;
+    color: var(--main-bg-color);
+    font-size: 12px;
+    font-weight: 700;
+    background-color: var(--main-white);
+    border-radius: 8px;
     outline: none;
-    border: 1px solid #ffffff11;
+    border: 2px solid #D9D9D98c;
 }
 #form-filter input{
-    margin: 10px 15px;
-    padding: 5px 15px;
+    padding: 6px 30px;
     height: auto;
-    color: #000000;
-    font-size: 15px;
-    font-weight: 500;
-    background-color: #ffffff;
-    border-radius: 5px;
+    color: var(--main-white);
+    font-size: 12px;
+    font-weight: 700;
+    background-color: var(--main-blue);
+    border-radius: 8px;
     cursor: pointer;
     outline: none;
     border: none;
-}
+  }
+  #form-filter input:hover{
+    box-shadow: 0px 0px 4px 1px #007efc79;
+  }
 
 .result-filters{
-    margin-bottom: 50px;
+    margin-bottom: 62px;
+    padding: 0 24px;
     width: 100%;
     height: auto;
     display: grid;
@@ -44,4 +81,26 @@
     justify-content: center;
     grid-template-columns: repeat(auto-fit, 320px);
     gap: 50px;
+}
+
+@media only screen and (min-width : 800px){
+  .filter_title::before{
+    height: 42px;
+  }
+  .shadow-title_filter{
+    margin-right: 10px;
+    height: 42px;
+  }
+  .filter_title h2{
+    font-size: 36px;
+  }
+  #form-filter{
+    flex-direction: row;
+  }
+}
+
+@media only screen and (min-width : 1500px){
+  .result-filters{
+    padding: 0 92px;
+  }
 }

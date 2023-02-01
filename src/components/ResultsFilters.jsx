@@ -12,7 +12,7 @@ function ResultsFilters({params}) {
 			{
 				games.map(singleGame => <Game key={singleGame.id} thumbnail={singleGame.thumbnail} title={singleGame.title} platform={singleGame.platform} developer={singleGame.developer}/>)
 			}
-      	</>
+      </>
 	)
 }
 

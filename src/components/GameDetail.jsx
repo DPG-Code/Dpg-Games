@@ -11,15 +11,16 @@ export default function GameDetail(props) {
                 </div>
             </section>
             <aside className='game-detail-info'>
-                <h3>{props.title}</h3>
+                <h3>{props.title.toUpperCase()}</h3>
                 <p className='description'>{props.short_description}</p>
                 <div className="tags">
-                    <p className='platform'>{props.platform}</p>
+                    <p className='platform_detail'>{props.platform}</p>
                     <p className='genre'>{props.genre}</p>
                 </div>
-                <p className='developer'>Developer: {props.developer}</p>
-                <p className='publisher'>Publisher: {props.publisher}</p>
-                <p className='release_date'>Release Date: {props.release_date}</p>
+                <div className="divition-gamedetail"></div>
+                <p className='developer'><span>Developer: </span>{props.developer}</p>
+                <p className='publisher'><span>Publisher: </span>{props.publisher}</p>
+                <p className='release_date'><span>Release Date: </span>{props.release_date}</p>
             </aside>
             <img className='img-detail-back' src={props.thumbnail} alt={props.title} />
         </div>

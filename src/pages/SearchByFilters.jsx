@@ -22,15 +22,20 @@ function SearchByFilters() {
 
   return (
     <>
+      <div className='filter_title'>
+        <div className='shadow-title_filter'></div>
+        <h2>FILTER GAMES</h2>
+      </div>
+
       <form id="form-filter" action="" onSubmit={handleSubmit}>
-        <select className="platform" name="platform">
-            <option value="" select>Choose Platform</option>
-            <option value="pc">Windows (PC)</option>
+        <select className="platform" name="platform" required>
+            <option value="" disabled>Choose Platform</option>
+            <option value="pc" select>Windows (PC)</option>
             <option value="browser">Browser (WEB)</option>
         </select>
-        <select className="genres" name="genres">
-            <option value="" select>Choose Genre/Tag</option>
-            <option value="mmo">MMO</option>
+        <select className="genres" name="genres" required>
+            <option value="" disabled>Choose Genre/Tag</option>
+            <option value="mmo" select>MMO</option>
             <option value="mmorpg">MMORPG</option>
             <option value="shooter">Shooter</option>
             <option value="strategy">Strategy</option>
@@ -70,9 +75,9 @@ function SearchByFilters() {
             <option value="superhero">Superhero</option>
             <option value="permadeath">Permadeath</option>
         </select>
-        <select className="sort" name="sort">
-            <option value="" select>Sort By</option>
-            <option value="relevance">Relevance</option>
+        <select className="sort" name="sort" required>
+            <option value="" disabled>Sort By</option>
+            <option value="relevance" select>Relevance</option>
             <option value="popularity">Popularity</option>
             <option value="release-date">Release Date</option>
             <option value="alphabetical">Alphabetical</option>

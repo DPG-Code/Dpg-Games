@@ -7,15 +7,21 @@ export default function ResultsSearch ({params}) {
   const {loading, games} = useGamesId({keyword})
 
   const gameById = games.filter(gameById => gameById.title.toLowerCase() == keyword.toLowerCase().split("%20").join(" "))
-
+  
   return (
     <>
-      <h2>Result</h2>
+      {
+        gameById.length !== 0
+          ? <div className='results_title'>
+              <div className='shadow-title_results'></div>
+              <h2>RESULTS</h2>
+            </div>
+          : <h2 className='no-results'>No results</h2>
+      }
       { loading
       ? <Spinner />
       : gameById.map(singleGame => <Game key={singleGame.id} thumbnail={singleGame.thumbnail} title={singleGame.title} platform={singleGame.platform} developer={singleGame.developer}/>)
       }
-      <div className='bottom'></div>
     </>
   )
 }
