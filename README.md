@@ -1,6 +1,6 @@
 # Dpg-Games 👾
 
-![Project previe image](https://res.cloudinary.com/dhpxqwsym/image/upload/w_1280,h_720,c_fill/v1678870284/documentations/games_fibueq)
+![Project previe image](https://res.cloudinary.com/dhpxqwsym/image/upload/w_1280,h_720,c_fill/v1678870284/documentations/freegames_urvstv)
 
 ### 🎮 About The Project
 
